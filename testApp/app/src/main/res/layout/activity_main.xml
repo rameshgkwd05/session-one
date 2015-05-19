@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:background="#a31231"
+                tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:text="@string/new_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/textView"/>
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_text_hint"
+        tools:text="tools text"/>
+    <LinearLayout
+        android:id="@+id/llCheckBox"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText">
+        <CheckBox
+            android:text="check box 1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="check box 2"/>
+    </LinearLayout>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llCheckBox">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:onClick="method"
+        android:layout_below="@id/radioGroup"/>
+
+</RelativeLayout>
